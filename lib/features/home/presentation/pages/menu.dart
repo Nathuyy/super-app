@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../contact_list/presentation/pages/contact_list.dart';
 import 'menu_item.dart';
 
 class Menu extends StatelessWidget {
@@ -17,9 +18,15 @@ class Menu extends StatelessWidget {
         MenuItem(
           icon: Icons.phone_outlined,
           title: 'Contatos',
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ContactList(),
+              ),
+            );
+          },
         ),
-
       ],
     );
   }
