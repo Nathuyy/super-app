@@ -7,8 +7,22 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       onGenerateRoute: AppRouter.generateRoute,
       initialRoute: '/home',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF226678),
+          primary: const Color(0xFF226678),
+        ),
+        scaffoldBackgroundColor: const Color(0xFFF7F7F5),
+        textSelectionTheme: const TextSelectionThemeData(
+          cursorColor: Color(0xFF226678),
+          selectionColor: Color(0x33226678),
+          selectionHandleColor: Color(0xFF226678),
+        ),
+      ),
     );
   }
 }
